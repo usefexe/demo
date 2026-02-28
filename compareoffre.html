@@ -26,6 +26,10 @@
             },
         }
     </script>
+<script src="js/app.js"></script>
+<script src="js/data.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/compare.js"></script>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
 <div class="relative flex h-auto w-full flex-col overflow-x-hidden">
@@ -79,137 +83,7 @@
 <p class="text-slate-500 dark:text-slate-400 text-lg">Choisissez le véhicule qui correspond le mieux à vos besoins pour votre séjour au Maroc.</p>
 </div>
 <!-- Comparison Grid -->
-<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
-<div class="overflow-x-auto">
-<table class="w-full text-left border-collapse">
-<thead>
-<tr class="bg-slate-50/50 dark:bg-slate-800/50">
-<th class="p-6 w-1/4 min-w-[240px] border-b border-slate-200 dark:border-slate-800">
-<span class="text-slate-400 text-xs font-bold uppercase tracking-wider">Caractéristiques</span>
-</th>
-<!-- Column 1 -->
-<th class="p-6 w-1/4 min-w-[240px] border-b border-slate-200 dark:border-slate-800 relative">
-<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
-<span class="material-symbols-outlined text-lg">cancel</span>
-</button>
-<div class="flex flex-col items-center gap-4">
-<div class="w-full aspect-[4/3] rounded-lg bg-slate-100 dark:bg-slate-800 bg-center bg-cover" data-alt="White Dacia Logan modern sedan car" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1v8_R5q32gICL5bqgahydKzw6cOE3K2D9q9RN3br3GnxfGPXhW4IrDaUdjVg_wg0EGYbBgOfqGj-7B47kHqZAUwwwsD30zZiOysDxJXpKw6GLyADw0opMFzvYhuP3_-9oDmlnG88Lkqw6478_I3MyGIaVRkewrF6bppUBit-XQwmo1jjr5NSi4WtMl5Co8EdCCrA1dtuXdP2yMB34w6JMwSmlgVrBNEPL7WOgJph5hcmH5AQuraSQIrR1ZxzuhSFY1WaZDntwxmQ')"></div>
-<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Dacia Logan</h3>
-</div>
-</th>
-<!-- Column 2 -->
-<th class="p-6 w-1/4 min-w-[240px] border-b border-slate-200 dark:border-slate-800 relative">
-<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
-<span class="material-symbols-outlined text-lg">cancel</span>
-</button>
-<div class="flex flex-col items-center gap-4">
-<div class="w-full aspect-[4/3] rounded-lg bg-slate-100 dark:bg-slate-800 bg-center bg-cover" data-alt="Silver Renault Clio hatchback car" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCbPy2DELeU9WrsYcFp_XCtseSJScVYH1Y3RONdBSFYE2OGM-r6sjudFdgV-6Mm5i_WQ-P6_ZXhGnTmIMabl4H37j5igsSFOLM6yaUZqs0_gSKxRxU_FeOYVQmRetZVpfUKLP6ZImPjY768y9JE9cyVVKILRI4HGW2juelun8yAWjSxBqlInw7zSOTzqU1dGNm61_kI-yzO2ZhBHYCyhnd38-FaGugRQ9J16SXAu7qlCKRNDigssWHI9lj0X_-j97_yWMTBGmCcdU')"></div>
-<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Renault Clio</h3>
-</div>
-</th>
-<!-- Column 3 -->
-<th class="p-6 w-1/4 min-w-[240px] border-b border-slate-200 dark:border-slate-800 relative">
-<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
-<span class="material-symbols-outlined text-lg">cancel</span>
-</button>
-<div class="flex flex-col items-center gap-4">
-<div class="w-full aspect-[4/3] rounded-lg bg-slate-100 dark:bg-slate-800 bg-center bg-cover" data-alt="Blue Hyundai i10 compact city car" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDe0DKRlfZGz_rvfdpnH1AvyXVDOmXGNal_EswvK7B8wRFQK8m43m0AgffdUAPHK4rMnPcXMbTPIdLLwSey7_NAok6-QmWcInkb2W2PF5FVkJc4Ww1Tr4U-3IG1aJ2wyK6ebSPowNSWNl0VFo3ejaMcmLBJCrp_MOzlvARRicZ1XYSHuaBhvCCOAf2VH3qszvBSwueFLo1Z8Azlkhcqe18K3_baLSfS-PwaIOgSh7oGHhqCu8vm5cks_FxDdGZUnYFazV2B8w6e83w')"></div>
-<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Hyundai i10</h3>
-</div>
-</th>
-</tr>
-</thead>
-<tbody>
-<!-- Price / Day -->
-<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
-<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Prix / jour</td>
-<td class="p-6 text-center text-primary font-bold text-xl">250 MAD</td>
-<td class="p-6 text-center text-primary font-bold text-xl">320 MAD</td>
-<td class="p-6 text-center text-primary font-bold text-xl">220 MAD</td>
-</tr>
-<!-- Total (7 days) -->
-<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
-<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Total (7 jours)</td>
-<td class="p-6 text-center text-slate-900 dark:text-slate-100 font-semibold">1 750 MAD</td>
-<td class="p-6 text-center text-slate-900 dark:text-slate-100 font-semibold">2 240 MAD</td>
-<td class="p-6 text-center text-slate-900 dark:text-slate-100 font-semibold">1 540 MAD</td>
-</tr>
-<!-- Transmission -->
-<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
-<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Transmission</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">Manuelle</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">Automatique</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">Manuelle</td>
-</tr>
-<!-- Carburant -->
-<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
-<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Carburant</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">Diesel</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">Essence</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">Essence</td>
-</tr>
-<!-- Kilométrage -->
-<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
-<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Kilométrage</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">Illimité</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">250 km / jour</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">Illimité</td>
-</tr>
-<!-- Caution -->
-<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
-<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Caution</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">5 000 MAD</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">8 000 MAD</td>
-<td class="p-6 text-center text-slate-600 dark:text-slate-400">4 000 MAD</td>
-</tr>
-<!-- Agence -->
-<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
-<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Agence</td>
-<td class="p-6 text-center">
-<div class="flex flex-col items-center gap-1">
-<span class="text-slate-900 dark:text-slate-100 font-medium">Hertz Casa</span>
-<span class="text-xs text-slate-400">Aéroport Mohammed V</span>
-</div>
-</td>
-<td class="p-6 text-center">
-<div class="flex flex-col items-center gap-1">
-<span class="text-slate-900 dark:text-slate-100 font-medium">Sixt Rabat</span>
-<span class="text-xs text-slate-400">Centre Ville</span>
-</div>
-</td>
-<td class="p-6 text-center">
-<div class="flex flex-col items-center gap-1">
-<span class="text-slate-900 dark:text-slate-100 font-medium">Europcar</span>
-<span class="text-xs text-slate-400">Aéroport Marrakech</span>
-</div>
-</td>
-</tr>
-<!-- Action Buttons -->
-<tr>
-<td class="p-6"></td>
-<td class="p-6">
-<button class="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 px-4 rounded-lg hover:brightness-105 active:scale-[0.98] transition-all">
-<span>Choisir</span>
-<span class="material-symbols-outlined text-lg">check_circle</span>
-</button>
-</td>
-<td class="p-6">
-<button class="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 px-4 rounded-lg hover:brightness-105 active:scale-[0.98] transition-all">
-<span>Choisir</span>
-<span class="material-symbols-outlined text-lg">check_circle</span>
-</button>
-</td>
-<td class="p-6">
-<button class="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 px-4 rounded-lg hover:brightness-105 active:scale-[0.98] transition-all">
-<span>Choisir</span>
-<span class="material-symbols-outlined text-lg">check_circle</span>
-</button>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden" data-compare-table></div>
 <!-- Additional Context/Footer -->
 <div class="mt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-primary/10 border border-primary/20 p-6 rounded-xl">
 <div class="flex items-start gap-3">
