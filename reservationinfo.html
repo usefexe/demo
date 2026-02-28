@@ -27,14 +27,24 @@
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
   <div class="relative flex min-h-screen w-full flex-col">
     <!-- Header -->
-    <header class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 md:px-20 py-4">
-      <div class="flex items-center justify-between">
-        <a href="aceuil.html" class="flex items-center gap-2 text-primary hover:opacity-80 transition">
-          <span class="material-symbols-outlined text-3xl font-bold">directions_car</span>
-          <h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">YaanCarz</h2>
-        </a>
+    <header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-8">
+          <a href="aceuil.html" class="flex items-center gap-2 text-primary hover:opacity-80 transition">
+            <span class="material-symbols-outlined text-3xl font-bold">directions_car</span>
+            <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">YaanCarz</h2>
+          </a>
+        </div>
         <div class="flex items-center gap-4">
-          <button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm font-bold tracking-tight hover:bg-slate-200 dark:hover:bg-slate-700 transition-all" data-login-btn>Connexion</button>
+          <nav class="hidden lg:flex items-center gap-6">
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Flotte</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Agences</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Aide</a>
+          </nav>
+          <button class="flex items-center justify-center rounded-xl bg-primary px-5 py-2 text-sm font-bold text-white hover:bg-primary/90 transition-all" data-login-btn>Connexion</button>
+          <div class="h-10 w-10 overflow-hidden rounded-full border border-slate-200 dark:border-slate-700">
+            <img alt="Avatar utilisateur" data-alt="User profile avatar placeholder image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRjJ1JoRMPZbE2RSxEfE9sI5b1XI4ooq5HWoQoeV0EOlsZqGdSxuLgpNws1cvAKcVC1TWXLCDbHn8sVogWWAvCuzX32BBCV9s9lqXr2BJC1APgsbLjsF0M063QEp-bGlyxCJql2DDa8zF8eerFSnjE3hGfSk7oiHW81phYEmPpKxwiPBXfcWS1U3Z0WXswD_o06VZW18nurBr86xnncMxHLnLi1KdBRiEYovPSu4G7P7Njbxp_iAaw3-j1u9zCpEzyMBWMouToZxM"/>
+          </div>
         </div>
       </div>
     </header>

@@ -34,26 +34,27 @@
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
 <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
-<!-- Top Navigation -->
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-10 py-3">
-<div class="flex items-center gap-4 text-primary">
-<div class="size-6">
-<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
-</svg>
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+<div class="flex items-center gap-8">
+<a href="aceuil.html" class="flex items-center gap-2 text-primary hover:opacity-80 transition">
+<span class="material-symbols-outlined text-3xl font-bold">directions_car</span>
+<h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">YaanCarz</h2>
+</a>
 </div>
-<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">YaanCarz</h2>
+<div class="flex items-center gap-4">
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Flotte</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Agences</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Aide</a>
+</nav>
+<button class="flex items-center justify-center rounded-xl bg-primary px-5 py-2 text-sm font-bold text-white hover:bg-primary/90 transition-all" data-login-btn>
+                        Connexion
+                    </button>
+<div class="h-10 w-10 overflow-hidden rounded-full border border-slate-200 dark:border-slate-700">
+<img alt="Avatar utilisateur" data-alt="User profile avatar placeholder image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRjJ1JoRMPZbE2RSxEfE9sI5b1XI4ooq5HWoQoeV0EOlsZqGdSxuLgpNws1cvAKcVC1TWXLCDbHn8sVogWWAvCuzX32BBCV9s9lqXr2BJC1APgsbLjsF0M063QEp-bGlyxCJql2DDa8zF8eerFSnjE3hGfSk7oiHW81phYEmPpKxwiPBXfcWS1U3Z0WXswD_o06VZW18nurBr86xnncMxHLnLi1KdBRiEYovPSu4G7P7Njbxp_iAaw3-j1u9zCpEzyMBWMouToZxM"/>
 </div>
-<div class="flex flex-1 justify-end gap-8">
-<div class="hidden md:flex items-center gap-9">
-<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Mes Réservations</a>
-<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Véhicules</a>
-<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Aide</a>
 </div>
-<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-sm">
-<span>Déconnexion</span>
-</button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCImb9oh-NxN5X3T1Tsa7otEXl0Ed9iQ5reS3J_Ik03J7ohYHd47jIcSQzn0ZBkRxJTP-oegzL_fcRK2ov3lHa4MfnhbaF8ENuUSBlxHFpB4oOlwHB49OitOIQPs-1ZmaxbbhWFa7IQuLPa985POhjDcyBpn1iVSK1bhzH9KSPdIhXnKEF5SYTOzMY-0rtan7oUlttKcBQ7t_GKPiPNPcfbSnrLfR3cMkGzSGJimylK5VtRwiNRgk3R0mK6Tv2Kcfv07Z8kSJSc8FU");'></div>
 </div>
 </header>
 <main class="flex flex-1 justify-center py-8">
