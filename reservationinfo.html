@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>YaanCarz - Mes Réservations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-72 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 hidden lg:flex flex-col sticky top-0 h-screen">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="bg-primary size-10 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-slate-900 dark:text-white text-lg font-bold leading-none">YaanCarz</h1>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">Plateforme de Location</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-semibold transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">event_note</span>
+<span class="text-sm">Mes Réservations</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-sm">Profil</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm">Paramètres</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-red-500 hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium">Déconnexion</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 min-w-0 overflow-y-auto">
+<div class="max-w-5xl mx-auto px-6 py-8">
+<!-- Header -->
+<div class="mb-8">
+<h2 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white">Mes Réservations</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-2">Gérez vos locations de voitures et consultez l'historique de vos trajets au Maroc.</p>
+</div>
+<!-- Tabs/Filters -->
+<div class="flex border-b border-slate-200 dark:border-slate-800 mb-8 gap-8 overflow-x-auto scrollbar-hide">
+<button class="pb-4 text-sm font-bold border-b-2 border-primary text-primary whitespace-nowrap">Toutes (12)</button>
+<button class="pb-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap transition-colors">Confirmée</button>
+<button class="pb-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap transition-colors">En attente</button>
+<button class="pb-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap transition-colors">Terminée</button>
+<button class="pb-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 whitespace-nowrap transition-colors">Annulée</button>
+</div>
+<!-- Bookings Grid -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Card 1: Confirmée -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row">
+<div class="md:w-64 h-48 md:h-auto overflow-hidden relative">
+<img alt="Dacia Logan" class="w-full h-full object-cover" data-alt="Modern white Dacia Logan car parked outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqjABBUY1B8vIp7SvcpIH77JRgwmAt9sY8NOqS82ZrQdKdk4Y_Oj-c-JMLkULTfQhQg-2ctVmHDsS3YwVAN3Jjkm7V2xEHYRTNSY0s_EhzDSvZ0Rb8uIPjYvwxx17lxxvO5O4vbjeNw4pu-kOazrPk6MJB0SoY5lLyyJxY7Tn9eFjzJ1wCjHDWX93kOME7PNI27Pdh9L8sKXKhuybWEc3THn8HWeij80m_6Ey7_51eW46jxo88RgD_t3lbdzeGY3jVJWxQO-o9pYU"/>
+<div class="absolute top-3 left-3">
+<span class="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Confirmée</span>
+</div>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Dacia Logan</h3>
+<span class="text-primary font-bold text-lg">350 MAD/jour</span>
+</div>
+<div class="space-y-3 mt-4">
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>12 Oct - 15 Oct 2023 (3 Jours)</span>
+</div>
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Aéroport Casablanca Mohammed V</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6 pt-6 border-t border-slate-100 dark:border-slate-800">
+<div class="flex -space-x-2">
+<div class="size-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 overflow-hidden">
+<img alt="Agency" data-alt="Small agency profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACsljUS40T-6Vx9KyJ9h83QfKKsrq9X-Ws9Iby6fj1Bfgjy5si0z5Gzdc48mmMuIkmThy_jPz6BDzcw_ke06Wz6LzWwvpunvAwq49R0R2suVQs23bbM8tHVw_YzEMpRNyeNZnHwOOyUDbaI0wizgN9AbHKbyFGq8vrWicWcyO1NmdZe0B8jDOFZNz2KqItHDr_nKpWr_dbKeTa2y4_pOeLK3Uqu_dlZG5L707MgQU5STHQtLEAlFdJudG--_YAW7aPodGyD4UsqNU"/>
+</div>
+<div class="size-8 rounded-full border-2 border-white dark:border-slate-900 bg-slate-200 flex items-center justify-center text-[10px] font-bold">AZ</div>
+</div>
+<button class="bg-primary text-white text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-colors">
+                                    Voir détails
+                                </button>
+</div>
+</div>
+</div>
+<!-- Card 2: En attente -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row opacity-90">
+<div class="md:w-64 h-48 md:h-auto overflow-hidden relative">
+<img alt="Renault Clio" class="w-full h-full object-cover" data-alt="Metallic grey Renault Clio car in a showroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL52Uo5lvT5DYVYyoNc3flOEK-LxPh0VGdK8lSQT3bDIDn08vP6Sn3mfjfT9gWSNBJAwc4MReFcaho7Vnkl6uhTyjqVZ17MfpQ249klyEAWvuhuZ0ixSqroFuY4xRNq9eXVWj4TIU6LgGVZVJhW18p0l1glNt_XAYsJUjCJ7cXT99V2CFLo3Rh0-9lO8MW3AZMayuZopAZ16HaUc8_-CbVgcwPZh6vqqStQjSqdShluW1fKLs_1Y7Oi1SCt3PPdSiHAVDYSBdc3fI"/>
+<div class="absolute top-3 left-3">
+<span class="bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">En attente</span>
+</div>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Renault Clio</h3>
+<span class="text-primary font-bold text-lg">420 MAD/jour</span>
+</div>
+<div class="space-y-3 mt-4">
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>20 Nov - 22 Nov 2023 (2 Jours)</span>
+</div>
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Gare Marrakech-Guéliz</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6 pt-6 border-t border-slate-100 dark:border-slate-800">
+<span class="text-xs text-slate-400">Demande envoyée il y a 2 heures</span>
+<button class="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                                    Détails de la demande
+                                </button>
+</div>
+</div>
+</div>
+<!-- Card 3: Annulée -->
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row opacity-75 grayscale-[0.5]">
+<div class="md:w-64 h-48 md:h-auto overflow-hidden relative">
+<img alt="Volkswagen Polo" class="w-full h-full object-cover" data-alt="Red Volkswagen Polo driving on a highway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpI8TQyTEoHhcPZ7uicYvmAbDbwfK3465hFKqeyhHWO4AqbJT1Qbb2Y9De-aRm4IrPqyApKSqqIYxILrLgd8JjpvAWAH9p9Vm_sZZIQAv0L_GyhHu78URYiN9hAcSU5gq6Sp4d51b2e4fniJ3nI3UFiimOt0Ox_4O8mbFeo7HGqrN1an1wTDCRK-e_59p2QDPjTHkh9wTQAQu36_p3DiD1PDc8fuz0t6jBLWDYRAejc3UTSD6bRJxkAt1zyk3Xuay9f-mmqz87MmM"/>
+<div class="absolute top-3 left-3">
+<span class="bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Annulée</span>
+</div>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Volkswagen Polo</h3>
+<span class="text-slate-400 line-through text-sm">380 MAD/jour</span>
+</div>
+<div class="space-y-3 mt-4">
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>05 Sep - 07 Sep 2023 (2 Jours)</span>
+</div>
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Rabat Agdal</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6 pt-6 border-t border-slate-100 dark:border-slate-800">
+<span class="text-xs text-red-500 font-medium italic">Annulée par l'utilisateur</span>
+<button class="text-primary text-sm font-bold hover:underline transition-all">
+                                    Relouer ce véhicule
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load more -->
+<div class="mt-12 flex justify-center">
+<button class="flex items-center gap-2 px-8 py-3 rounded-full border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span>Charger plus de réservations</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>YaanCarz - Comparer les offres</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 lg:px-20 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">directions_car</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-black leading-tight tracking-tight">YaanCarz</h2>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="#">Louer</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="#">Agences</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="#">Promotions</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-semibold hover:text-primary transition-colors" href="#">Aide</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<label class="hidden lg:flex flex-col min-w-48 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden border border-slate-200 dark:border-slate-700">
+<div class="bg-slate-50 dark:bg-slate-800 flex items-center justify-center px-3 border-r border-slate-200 dark:border-slate-700 text-slate-400">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-0 text-sm font-normal placeholder:text-slate-400" placeholder="Rechercher une ville..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold tracking-tight hover:brightness-110 transition-all">
+                            S'inscrire
+                        </button>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-sm font-bold tracking-tight hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
+                            Connexion
+                        </button>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8 px-4 lg:px-20">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-6 text-sm">
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Accueil</a>
+<span class="material-symbols-outlined text-base text-slate-300">chevron_right</span>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary" href="#">Résultats</a>
+<span class="material-symbols-outlined text-base text-slate-300">chevron_right</span>
+<span class="text-primary font-semibold">Comparaison</span>
+</nav>
+<!-- Header Section -->
+<div class="mb-8">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-tight mb-2">Comparer les offres</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg">Choisissez le véhicule qui correspond le mieux à vos besoins pour votre séjour au Maroc.</p>
+</div>
+<!-- Comparison Grid -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50/50 dark:bg-slate-800/50">
+<th class="p-6 w-1/4 min-w-[240px] border-b border-slate-200 dark:border-slate-800">
+<span class="text-slate-400 text-xs font-bold uppercase tracking-wider">Caractéristiques</span>
+</th>
+<!-- Column 1 -->
+<th class="p-6 w-1/4 min-w-[240px] border-b border-slate-200 dark:border-slate-800 relative">
+<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">cancel</span>
+</button>
+<div class="flex flex-col items-center gap-4">
+<div class="w-full aspect-[4/3] rounded-lg bg-slate-100 dark:bg-slate-800 bg-center bg-cover" data-alt="White Dacia Logan modern sedan car" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1v8_R5q32gICL5bqgahydKzw6cOE3K2D9q9RN3br3GnxfGPXhW4IrDaUdjVg_wg0EGYbBgOfqGj-7B47kHqZAUwwwsD30zZiOysDxJXpKw6GLyADw0opMFzvYhuP3_-9oDmlnG88Lkqw6478_I3MyGIaVRkewrF6bppUBit-XQwmo1jjr5NSi4WtMl5Co8EdCCrA1dtuXdP2yMB34w6JMwSmlgVrBNEPL7WOgJph5hcmH5AQuraSQIrR1ZxzuhSFY1WaZDntwxmQ')"></div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Dacia Logan</h3>
+</div>
+</th>
+<!-- Column 2 -->
+<th class="p-6 w-1/4 min-w-[240px] border-b border-slate-200 dark:border-slate-800 relative">
+<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">cancel</span>
+</button>
+<div class="flex flex-col items-center gap-4">
+<div class="w-full aspect-[4/3] rounded-lg bg-slate-100 dark:bg-slate-800 bg-center bg-cover" data-alt="Silver Renault Clio hatchback car" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCbPy2DELeU9WrsYcFp_XCtseSJScVYH1Y3RONdBSFYE2OGM-r6sjudFdgV-6Mm5i_WQ-P6_ZXhGnTmIMabl4H37j5igsSFOLM6yaUZqs0_gSKxRxU_FeOYVQmRetZVpfUKLP6ZImPjY768y9JE9cyVVKILRI4HGW2juelun8yAWjSxBqlInw7zSOTzqU1dGNm61_kI-yzO2ZhBHYCyhnd38-FaGugRQ9J16SXAu7qlCKRNDigssWHI9lj0X_-j97_yWMTBGmCcdU')"></div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Renault Clio</h3>
+</div>
+</th>
+<!-- Column 3 -->
+<th class="p-6 w-1/4 min-w-[240px] border-b border-slate-200 dark:border-slate-800 relative">
+<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-lg">cancel</span>
+</button>
+<div class="flex flex-col items-center gap-4">
+<div class="w-full aspect-[4/3] rounded-lg bg-slate-100 dark:bg-slate-800 bg-center bg-cover" data-alt="Blue Hyundai i10 compact city car" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDe0DKRlfZGz_rvfdpnH1AvyXVDOmXGNal_EswvK7B8wRFQK8m43m0AgffdUAPHK4rMnPcXMbTPIdLLwSey7_NAok6-QmWcInkb2W2PF5FVkJc4Ww1Tr4U-3IG1aJ2wyK6ebSPowNSWNl0VFo3ejaMcmLBJCrp_MOzlvARRicZ1XYSHuaBhvCCOAf2VH3qszvBSwueFLo1Z8Azlkhcqe18K3_baLSfS-PwaIOgSh7oGHhqCu8vm5cks_FxDdGZUnYFazV2B8w6e83w')"></div>
+<h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Hyundai i10</h3>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<!-- Price / Day -->
+<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
+<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Prix / jour</td>
+<td class="p-6 text-center text-primary font-bold text-xl">250 MAD</td>
+<td class="p-6 text-center text-primary font-bold text-xl">320 MAD</td>
+<td class="p-6 text-center text-primary font-bold text-xl">220 MAD</td>
+</tr>
+<!-- Total (7 days) -->
+<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
+<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Total (7 jours)</td>
+<td class="p-6 text-center text-slate-900 dark:text-slate-100 font-semibold">1 750 MAD</td>
+<td class="p-6 text-center text-slate-900 dark:text-slate-100 font-semibold">2 240 MAD</td>
+<td class="p-6 text-center text-slate-900 dark:text-slate-100 font-semibold">1 540 MAD</td>
+</tr>
+<!-- Transmission -->
+<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
+<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Transmission</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">Manuelle</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">Automatique</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">Manuelle</td>
+</tr>
+<!-- Carburant -->
+<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
+<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Carburant</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">Diesel</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">Essence</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">Essence</td>
+</tr>
+<!-- Kilométrage -->
+<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
+<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Kilométrage</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">Illimité</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">250 km / jour</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">Illimité</td>
+</tr>
+<!-- Caution -->
+<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
+<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Caution</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">5 000 MAD</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">8 000 MAD</td>
+<td class="p-6 text-center text-slate-600 dark:text-slate-400">4 000 MAD</td>
+</tr>
+<!-- Agence -->
+<tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50/30 dark:hover:bg-slate-800/30">
+<td class="p-6 font-semibold text-slate-700 dark:text-slate-300">Agence</td>
+<td class="p-6 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="text-slate-900 dark:text-slate-100 font-medium">Hertz Casa</span>
+<span class="text-xs text-slate-400">Aéroport Mohammed V</span>
+</div>
+</td>
+<td class="p-6 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="text-slate-900 dark:text-slate-100 font-medium">Sixt Rabat</span>
+<span class="text-xs text-slate-400">Centre Ville</span>
+</div>
+</td>
+<td class="p-6 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="text-slate-900 dark:text-slate-100 font-medium">Europcar</span>
+<span class="text-xs text-slate-400">Aéroport Marrakech</span>
+</div>
+</td>
+</tr>
+<!-- Action Buttons -->
+<tr>
+<td class="p-6"></td>
+<td class="p-6">
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 px-4 rounded-lg hover:brightness-105 active:scale-[0.98] transition-all">
+<span>Choisir</span>
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</button>
+</td>
+<td class="p-6">
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 px-4 rounded-lg hover:brightness-105 active:scale-[0.98] transition-all">
+<span>Choisir</span>
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</button>
+</td>
+<td class="p-6">
+<button class="w-full flex items-center justify-center gap-2 bg-primary text-white font-bold py-3 px-4 rounded-lg hover:brightness-105 active:scale-[0.98] transition-all">
+<span>Choisir</span>
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Additional Context/Footer -->
+<div class="mt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-primary/10 border border-primary/20 p-6 rounded-xl">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">info</span>
+<div>
+<p class="text-slate-900 dark:text-slate-100 font-bold">Le saviez-vous ?</p>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Toutes nos locations incluent une assurance responsabilité civile et une assistance 24/7 partout au Maroc.</p>
+</div>
+</div>
+<button class="whitespace-nowrap bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-bold py-2 px-6 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                            Voir plus d'offres
+                        </button>
+</div>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 lg:px-20 py-12">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-primary mb-6">
+<span class="material-symbols-outlined text-2xl font-bold">directions_car</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-black tracking-tight">YaanCarz</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                            La première plateforme de comparaison de location de voitures au Maroc. Simple, rapide et transparent.
+                        </p>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold mb-4">Entreprise</h4>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">À propos</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Partenariats</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold mb-4">Support</h4>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Centre d'aide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contactez-nous</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Conditions Générales</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-slate-100 font-bold mb-4">Réseaux Sociaux</h4>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 text-center">
+<p class="text-slate-400 text-xs">© 2024 YaanCarz Maroc. Tous droits réservés.</p>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

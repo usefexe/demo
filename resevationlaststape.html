@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>YaanCarz - Récapitulatif de réservation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-size: 20px; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-10 py-3">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">YaanCarz</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Mes Réservations</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Véhicules</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Aide</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-sm">
+<span>Déconnexion</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCImb9oh-NxN5X3T1Tsa7otEXl0Ed9iQ5reS3J_Ik03J7ohYHd47jIcSQzn0ZBkRxJTP-oegzL_fcRK2ov3lHa4MfnhbaF8ENuUSBlxHFpB4oOlwHB49OitOIQPs-1ZmaxbbhWFa7IQuLPa985POhjDcyBpn1iVSK1bhzH9KSPdIhXnKEF5SYTOzMY-0rtan7oUlttKcBQ7t_GKPiPNPcfbSnrLfR3cMkGzSGJimylK5VtRwiNRgk3R0mK6Tv2Kcfv07Z8kSJSc8FU");'></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col max-w-[1100px] flex-1 px-4 md:px-10">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap items-center gap-2 mb-6">
+<a class="text-primary text-sm font-medium" href="#">Recherche</a>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+<a class="text-primary text-sm font-medium" href="#">Sélection</a>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+<span class="text-slate-900 dark:text-white text-sm font-bold">Récapitulatif &amp; Paiement</span>
+</div>
+<!-- Page Header -->
+<div class="flex flex-col gap-2 mb-8">
+<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Dernière étape !</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base">Vérifiez les détails de votre réservation et choisissez votre mode de paiement.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Column: Details & Payment -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<!-- Selected Vehicle Card -->
+<div class="flex flex-col md:flex-row items-stretch justify-between gap-6 rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex flex-col justify-between flex-1 gap-4">
+<div>
+<span class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary mb-2">Véhicule sélectionné</span>
+<p class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">Dacia Logan - Diesel</p>
+<div class="flex items-center gap-2 mt-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined">location_on</span>
+<p class="text-sm">Agence: YaanCarz Casablanca Centre</p>
+</div>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-1 text-slate-500 text-sm">
+<span class="material-symbols-outlined">settings</span>
+<span>Manuelle</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500 text-sm">
+<span class="material-symbols-outlined">person</span>
+<span>5 Places</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500 text-sm">
+<span class="material-symbols-outlined">ac_unit</span>
+<span>Clim</span>
+</div>
+</div>
+</div>
+<button class="flex items-center justify-center gap-2 rounded-xl h-10 px-4 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-semibold w-fit hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined">edit</span>
+<span>Modifier</span>
+</button>
+</div>
+<div class="w-full md:w-64 bg-slate-50 dark:bg-slate-800 rounded-xl overflow-hidden flex items-center justify-center">
+<img alt="Dacia Logan Car" class="object-contain w-full h-full p-4" data-alt="Modern white sedan rental car profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlzq07_V-V1uIYqC-zvmzH8lpoP1Tu6yy9BeE0dsZT-wD5mETnARmPrdIBDlYQ6RANabc5k8acWhY9hxRW5ojU0v4gs7k5xivixEQMISZOk5IpWGqZpc9cmJhJtxBh-DgU5Dmh7fRdLIY6sjuifyZ41ypytWy3cC0mdjpqi6jLQ9VbitrP4uYDKVb6UURnn_46WHO8hw_zTqdaOrfZLtpkocbfJJWPqy4Ata04DmHQxM7ZO6pai2KnKgJdZjtRh7QlQO5DHFAeDNM"/>
+</div>
+</div>
+<!-- Payment Section -->
+<div class="rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">payments</span>
+                                Mode de paiement
+                            </h3>
+<div class="space-y-6">
+<!-- Option 1: Credit Card -->
+<div class="p-4 rounded-xl border-2 border-primary bg-primary/5">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<input checked="" class="text-primary focus:ring-primary h-4 w-4" id="card" name="payment" type="radio"/>
+<label class="font-bold text-slate-900 dark:text-white" for="card">Carte Bancaire (Sécurisé)</label>
+</div>
+<div class="flex gap-2">
+<img alt="Visa" class="h-4" data-alt="Visa payment network logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCv8U5HnYBKxzX5La7s2pqMlwQ5ZfbjKtBN09WEJodC2OOxZz5Z7qLHym706m6mOIbxPii6GLw7A0kr3fZXpGumkhVggP6RcSgB-a_fFy9O0aw5CEZi-dXDdPR3LA6zhsOWGJTa_oftSoDIyHZqZPcyXLxDCsT1kJ1PGwxg2eibm2N10H3p2-zndWOpsZrhD_LQNo4wym9_EDKyVp-PLQLTEizChiXJ8qzXlyFkO9I_BY6adx4yRphtWvozffEUuaiUt7vNrzIuRI"/>
+<img alt="Mastercard" class="h-4" data-alt="Mastercard payment network logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqDlOkHhYJmqM5I_mcB9AJqv4crfrulal0Q5z9xFAHPNpSDvun99ufzRkYk1rPVm5t9BLWTBE32V1w0ppzA133HawBkiYxil9Mh2k-YPN8RoL1fLotaWfCklu7-idvR-q3L-1B3btKs9yRoAYih6kwN48WB4o15h4RSGVBJrNfVqO2KkWBTSg1QDPv17nJgpMX7lR2nnmO5YomOzTAo7cv2_BEeI0-q8eelcm5w_UOcQszHQu41i9pXRkugorsnD1qaW25tI98JBo"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2">
+<label class="block text-xs font-medium text-slate-500 mb-1 uppercase tracking-wider">Numéro de carte</label>
+<div class="relative">
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 py-2.5 px-4 focus:ring-primary focus:border-primary text-sm" placeholder="0000 0000 0000 0000" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-slate-400">credit_card</span>
+</div>
+</div>
+<div>
+<label class="block text-xs font-medium text-slate-500 mb-1 uppercase tracking-wider">Date d'expiration</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 py-2.5 px-4 focus:ring-primary focus:border-primary text-sm" placeholder="MM/YY" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-slate-500 mb-1 uppercase tracking-wider">CVV</label>
+<input class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 py-2.5 px-4 focus:ring-primary focus:border-primary text-sm" placeholder="123" type="text"/>
+</div>
+</div>
+</div>
+<!-- Option 2: Pay at Agency -->
+<div class="p-4 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-slate-300 transition-colors">
+<div class="flex items-center gap-3">
+<input class="text-primary focus:ring-primary h-4 w-4" id="agency" name="payment" type="radio"/>
+<label class="font-bold text-slate-900 dark:text-white" for="agency">Paiement à l'agence</label>
+</div>
+<p class="mt-2 text-sm text-slate-500 ml-7">Réglez votre location directement lors de la récupération du véhicule à Casablanca.</p>
+</div>
+</div>
+</div>
+<!-- Terms & Conditions -->
+<div class="flex items-start gap-3 p-2">
+<input class="mt-1 rounded border-slate-300 text-primary focus:ring-primary" id="terms" type="checkbox"/>
+<label class="text-sm text-slate-600 dark:text-slate-400" for="terms">
+                                J'accepte les <a class="text-primary hover:underline font-medium" href="#">conditions générales de vente</a> et la <a class="text-primary hover:underline font-medium" href="#">politique de confidentialité</a> de YaanCarz Maroc.
+                            </label>
+</div>
+</div>
+<!-- Right Column: Summary Sidebar -->
+<div class="lg:col-span-1">
+<div class="sticky top-6 flex flex-col gap-4 rounded-xl bg-white dark:bg-slate-900 p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Résumé des coûts</h3>
+<div class="space-y-4">
+<div class="flex justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Prix par jour (x5 jours)</span>
+<span class="font-medium text-slate-900 dark:text-white">350 MAD</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Assurance Collision (CDW)</span>
+<span class="font-medium text-slate-900 dark:text-white">Inclus</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Frais d'agence</span>
+<span class="font-medium text-slate-900 dark:text-white">45 MAD</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-600 dark:text-slate-400">Taxes (TVA 20%)</span>
+<span class="font-medium text-slate-900 dark:text-white">359 MAD</span>
+</div>
+<hr class="border-slate-100 dark:border-slate-800"/>
+<div class="flex justify-between items-end">
+<div>
+<p class="text-xs text-slate-500 uppercase font-bold tracking-widest">Total à payer</p>
+<p class="text-3xl font-black text-slate-900 dark:text-white tracking-tighter">2 154 MAD</p>
+</div>
+<span class="text-xs text-primary font-bold mb-1 underline cursor-pointer">Détails taxes</span>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-800">
+<div class="flex flex-col gap-3 mb-6">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">calendar_today</span>
+<div>
+<p class="text-xs text-slate-500">Dates</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white">12 Mai - 17 Mai 2024</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">near_me</span>
+<div>
+<p class="text-xs text-slate-500">Lieu de prise en charge</p>
+<p class="text-sm font-bold text-slate-900 dark:text-white">Aéroport Mohammed V, Casablanca</p>
+</div>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-xl h-14 px-6 bg-primary text-white text-lg font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
+<span>Confirmer et Payer</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-[11px] text-slate-400 mt-4 px-2">
+                                    Transaction 100% sécurisée via CMI (Centre Monétique Interbancaire)
+                                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer / Help Section -->
+<div class="mt-12 py-8 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-slate-500 text-sm mb-4">Besoin d'aide pour finaliser votre réservation ?</p>
+<div class="flex flex-wrap justify-center gap-6">
+<div class="flex items-center gap-2 text-primary font-semibold">
+<span class="material-symbols-outlined">call</span>
+<span>+212 5 22 00 00 00</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-semibold">
+<span class="material-symbols-outlined">mail</span>
+<span>support@yaancarz.ma</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-semibold">
+<span class="material-symbols-outlined">chat</span>
+<span>Chat en direct</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

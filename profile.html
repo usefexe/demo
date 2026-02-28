@@ -1,0 +1,231 @@
+<html lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>YaanCarz - Mon Profil</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header / Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-white dark:bg-background-dark px-6 md:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary text-2xl">directions_car</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">YaanCarz</h2>
+</div>
+<label class="hidden lg:flex flex-col min-w-64 h-10">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+<div class="text-primary/60 flex border-none bg-primary/5 items-center justify-center pl-4 rounded-l-xl" data-icon="MagnifyingGlass">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-primary/5 focus:ring-0 text-slate-900 dark:text-slate-100 placeholder:text-primary/40 px-4 rounded-r-xl text-sm font-normal" placeholder="Rechercher un véhicule..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Flotte</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Agences</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Mes Réservations</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Aide</a>
+</nav>
+<div class="h-8 w-px bg-slate-200 dark:bg-slate-800 hidden md:block"></div>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-xl h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-sm">
+<span>Déconnexion</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/20 cursor-pointer" data-alt="Portrait of a smiling male customer profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVFbcG-wj-qzoc2456ydvmNGVHF1kAboL0SyOxdHyeLY8h_MtB-Hh_3hIFVncrTtq9b2TP903M_rc_yWvAUhTp06fcYg63MeCRzz1jdl7h9h_xoDQvaVsWaA2p_H5M335_IL5w8ULKw2_zOSg-Tx-fUtUoH_lEU2pywv9BFozTmXAZo4WtMQTIEoASe-7xWnsNeBYE7gEo40xHcieIlHHZZudfwQq4UF-BpVycRJ9YelC9nT7jPW_gDbpacM6LQ2dmhufU9W83rIM");'></div>
+</div>
+</header>
+<!-- Main Content Container -->
+<main class="flex flex-1 justify-center py-10 px-4 md:px-10 lg:px-40">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- Page Header -->
+<div class="flex flex-wrap justify-between gap-4 p-4 mb-6">
+<div class="flex min-w-72 flex-col gap-2">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-tighter">Mon Profil</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal">Gérez vos informations personnelles et sécurisez votre compte YaanCarz.</p>
+</div>
+</div>
+<!-- Profile Section Card -->
+<div class="bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 mb-8 shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<div class="relative group">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 border-4 border-white dark:border-slate-800 shadow-md transition-transform group-hover:scale-[1.02]" data-alt="Close up of a professional user profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCl3_v9nHijdcWBwDWZjUi9B2uEHPJ_v2P_QS8BWLEw1ht2qNUpG9qT7spzS56sTLHBwFXjryWXogOcUaC1ewgyY2x-iA7zPohBnV3X5bGM1uIWToaI1BaAXWvK2-3n62Vy2sKEbcDXSjysfMXF5uLcd-e4InckKRavU-xP_qTSGbMJnuQ0a7dOqbs4LHDK8Sg3YuDECBe7ZCq0PH5wVWTBYeVc0BLW-0TqTfl8ZcuEGY2TeT53zrwXZIyRf5umVj6vNlLuFY1aCP4");'></div>
+<button class="absolute bottom-1 right-1 bg-primary text-white p-2 rounded-full shadow-lg flex items-center justify-center hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</button>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold tracking-tight">Utilisateur YaanCarz</p>
+<p class="text-primary font-medium text-sm">Membre Premium</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">calendar_today</span>
+                                        Inscrit depuis Juin 2024
+                                    </p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 md:flex-none flex min-w-[140px] cursor-pointer items-center justify-center rounded-xl h-11 px-5 bg-primary/10 text-primary text-sm font-bold hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined text-lg mr-2">upload</span>
+<span>Changer la photo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Profile Form Section -->
+<div class="bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm overflow-hidden">
+<div class="px-8 py-6 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">person_edit</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold">Informations Personnelles</h2>
+</div>
+<div class="p-8">
+<form class="space-y-8">
+<!-- Info Rows -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Nom Complet</span>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">badge</span>
+<input class="form-input w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 py-3.5 pl-12 pr-4 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Votre nom complet" value="Karim El Mansouri"/>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Adresse Email</span>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">mail</span>
+<input class="form-input w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 py-3.5 pl-12 pr-4 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="email@exemple.com" value="karim.mansouri@email.com"/>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Téléphone</span>
+<div class="relative flex items-center">
+<div class="absolute left-4 flex items-center gap-1 text-slate-400 border-r border-slate-200 dark:border-slate-800 pr-2 mr-2">
+<span class="text-xs font-bold">+212</span>
+</div>
+<input class="form-input w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 py-3.5 pl-20 pr-4 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="6 XX XX XX XX" value="6 12 34 56 78"/>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Ville de résidence</span>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">location_on</span>
+<select class="form-select w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 py-3.5 pl-12 pr-4 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+<option selected="">Casablanca</option>
+<option>Rabat</option>
+<option>Marrakech</option>
+<option>Tanger</option>
+<option>Agadir</option>
+</select>
+</div>
+</label>
+</div>
+<hr class="border-slate-100 dark:border-slate-800"/>
+<div class="space-y-6">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">lock</span>
+<h3 class="text-slate-900 dark:text-slate-100 text-md font-bold">Sécurité du compte</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Nouveau Mot de Passe</span>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">key</span>
+<input class="form-input w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 py-3.5 pl-12 pr-4 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="********" type="password"/>
+</div>
+<p class="text-[11px] text-slate-400 mt-1">Laissez vide pour conserver le mot de passe actuel.</p>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-semibold">Confirmer le Mot de Passe</span>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock_reset</span>
+<input class="form-input w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 py-3.5 pl-12 pr-4 text-slate-900 dark:text-slate-100 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="********" type="password"/>
+</div>
+</label>
+</div>
+</div>
+<!-- Form Actions -->
+<div class="pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-end gap-4">
+<button class="order-2 md:order-1 flex min-w-[120px] cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-all" type="button">
+                                        Annuler
+                                    </button>
+<button class="order-1 md:order-2 flex min-w-[240px] cursor-pointer items-center justify-center rounded-xl h-12 px-8 bg-primary text-white text-base font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20" type="submit">
+<span class="material-symbols-outlined mr-2">save</span>
+                                        Enregistrer les modifications
+                                    </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Additional Account Options -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+<div class="p-5 bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-2xl flex flex-col items-center text-center gap-3 group hover:border-primary/40 transition-all cursor-pointer">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Paiement</h4>
+<p class="text-xs text-slate-500">Gérer vos cartes</p>
+</div>
+</div>
+<div class="p-5 bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-2xl flex flex-col items-center text-center gap-3 group hover:border-primary/40 transition-all cursor-pointer">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Notifications</h4>
+<p class="text-xs text-slate-500">Paramètres d'alertes</p>
+</div>
+</div>
+<div class="p-5 bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-2xl flex flex-col items-center text-center gap-3 group hover:border-red-500/40 transition-all cursor-pointer">
+<div class="size-12 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 group-hover:bg-red-500 group-hover:text-white transition-all">
+<span class="material-symbols-outlined">no_accounts</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100">Désactiver</h4>
+<p class="text-xs text-slate-500">Fermer le compte</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Small -->
+<footer class="mt-10 py-8 px-10 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-sm">copyright</span>
+<span class="text-sm">2024 YaanCarz - Solution de location premium au Maroc.</span>
+</div>
+<div class="flex gap-6">
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Confidentialité</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">CGU</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</footer>
+</div>
+</div>
+
+```</body></html>

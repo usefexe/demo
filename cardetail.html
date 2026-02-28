@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>YaanCarz - Détails du véhicule</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">YaanCarz</span>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Louer une voiture</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Agences</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Promotions</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</span>
+<input class="block w-64 pl-10 pr-3 py-2 border-none bg-slate-100 dark:bg-slate-800 rounded-lg text-sm placeholder-slate-500 focus:ring-2 focus:ring-primary/20" placeholder="Rechercher une ville, une agence..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all">Connexion</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 mb-6 text-sm font-medium text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Accueil</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Voitures</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-slate-900 dark:text-slate-100">Dacia Logan</span>
+</nav>
+<!-- Title Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<h1 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Dacia Logan - Manuelle / Diesel</h1>
+<div class="flex items-center gap-2 mt-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<p class="text-base">Casablanca - Aéroport Mohammed V (CMN)</p>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">share</span>
+                        Partager
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+                        Sauvegarder
+                    </button>
+</div>
+</div>
+<!-- Gallery -->
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[300px] md:h-[500px] mb-8 overflow-hidden rounded-xl">
+<div class="md:col-span-2 md:row-span-2 relative group">
+<div class="w-full h-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Dacia Logan sedan front view white color" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDecMFZVppD80hz-HKVygcXMeI-jgviGML1aXy9z8HBx-dV_iUTg44NWBR6MyrJpM7nHN-WXVS8jjScOtklpkgX0OuSG7bzn4NmnaLjLwH7WJ_eWUlLBXKCaob11hvU-aJWqCTJoQ0JpU8SGhRsZ-fodQAXyi9qGHF2mTb7h44ukBNuAFKFGad5dpeCjlsCgAzdC5MW1Yl0-3kBLJrFjT943Es11WvAezmQCSL_dShYX-k1vrwIsG8irFNswjSFV3EYVmdN0JyMmHc');"></div>
+</div>
+<div class="hidden md:block relative group">
+<div class="w-full h-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Interior dashboard of a modern car" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCaXZFp-ojSdGRBt68_-5u1EaVGJtEEAqNKp-0TJ6DXMJXrZDotViswc4yBCH4eiChtqCmvnEaAhbDrat7iUt5EsIp8ehfDGxkkQuACDiHDfT4U19yMCo19l52P9krXnlUlGgkRkyGs_vFoabNnYt1lqQlNk0tJHO66vHUyj-gbRiV9bfVu3ZF0Pz6CP9pgUJiLF6gsHy0wboiscwbCwtACx2CO3P5NljfZNbXRK_jqE6KoUMBQe9HpA2406ZfXVRiI1caYX_QTajg');"></div>
+</div>
+<div class="hidden md:block relative group">
+<div class="w-full h-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Side profile of a sleek sedan car" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrJGlg7fPuBDSdUih3yAaTgEQxyNUaTXKGHrtBuZ3CVyZyRrlraN-jRRpNh2tJcOBgAWTp2e_8MPNr9j3aZtoZWTYyoZHc6lokWbJsdeWcQFqrv4QnwGrxN5pIgfwp1QCjXQhcGNUFC56eudd5-r4oi57r06LxCZ-_uHhOS1xZ8pphByoERoywY3H1TdZN24N-A1qehJCBxPwpdgOYp88_M2tUFzNQX06LAUB0DxJ8g-wEMAUeH9YDX_eEa7S2xqmuVmr5wzB20e0');"></div>
+</div>
+<div class="hidden md:block relative group">
+<div class="w-full h-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Rear view of a white sedan car" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVietV3o_xyg5ibomrPJhz5NykM2AjKLnDat0ECq1JlXHPXTe-JY_ghprD3gOxC3MLFVoAOHpuSuDGdc6KuD4h0u0HuILG0FLpXhxjox-NgV19xzZ1WR4PCLOpWZgQtJlG6pl99MuhwUlNYpIAf1by69EvTt4RhIh6UDtS4D7jg6ASa7jipiE_gcrugoHlC11u6xYbyck37H6e7ZrJnyeRxGthDyuESp_yVogoGTSQPPR1-7WZGKIdVCqQrA33cy7Rb_lqlJ2dBAs');"></div>
+</div>
+<div class="hidden md:block relative group">
+<div class="w-full h-full bg-slate-200 dark:bg-slate-800 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 flex items-center justify-center" data-alt="View more photos overlay on car background" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7exoQg802q_OsYusm7LF6FTGwl_Cbtqtb3bNmWywfaq9R6PURSrG_Wo6InUAcOykZOhXf9y6C1-_cYguuQKVh3QCcCGhisMVeSM6rZgTX5gKagcgaifK5_rLHSJxnq1K2_4cb8oNsvQk81NxxzmdnirLwAcfOWTmhjdclWLeCARXprdOU1XzifuK_O1ykIUY6X4qOPAv3mrg2DlaX9y0zKCafHxB43P0JAyWTGub-U8NChjB_al5Vfm3C_GFV-RYUIGs42fBmhTk');">
+<span class="text-white font-bold text-lg">+12 Photos</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+<!-- Left Column -->
+<div class="lg:col-span-2 space-y-10">
+<!-- Caractéristiques -->
+<section>
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                            Caractéristiques du véhicule
+                        </h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-3xl text-primary/80">event_seat</span>
+<span class="text-sm font-medium">5 Sièges</span>
+</div>
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-3xl text-primary/80">work</span>
+<span class="text-sm font-medium">2 Bagages</span>
+</div>
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-3xl text-primary/80">settings</span>
+<span class="text-sm font-medium">Manuelle</span>
+</div>
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-3xl text-primary/80">ac_unit</span>
+<span class="text-sm font-medium">Climatisation</span>
+</div>
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-3xl text-primary/80">local_gas_station</span>
+<span class="text-sm font-medium">Diesel</span>
+</div>
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-3xl text-primary/80">door_front</span>
+<span class="text-sm font-medium">4 Portes</span>
+</div>
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-3xl text-primary/80">bolt</span>
+<span class="text-sm font-medium">USB / Aux</span>
+</div>
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-3xl text-primary/80">bluetooth</span>
+<span class="text-sm font-medium">Bluetooth</span>
+</div>
+</div>
+</section>
+<!-- Agency Info -->
+<section>
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">store</span>
+                            Proposé par l'agence
+                        </h3>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl gap-6">
+<div class="flex items-center gap-4">
+<div class="size-16 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">corporate_fare</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Yaan Rent Casablanca</h4>
+<div class="flex items-center gap-1 text-orange-400">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="text-slate-900 dark:text-white font-bold">4.8</span>
+<span class="text-slate-500 text-sm font-normal">(124 avis)</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Aéroport Mohammed V, Terminal 2</p>
+</div>
+</div>
+<button class="text-primary font-semibold hover:underline">Voir les 42 véhicules</button>
+</div>
+</section>
+<!-- Conditions -->
+<section>
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">gavel</span>
+                            Conditions de location
+                        </h3>
+<div class="space-y-4">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h5 class="font-bold">Âge minimum</h5>
+<p class="text-slate-600 dark:text-slate-400">Conducteur d'au moins 23 ans avec 2 ans de permis minimum.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h5 class="font-bold">Caution (Dépôt de garantie)</h5>
+<p class="text-slate-600 dark:text-slate-400">Une empreinte bancaire de 10,000 MAD est requise au départ.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h5 class="font-bold">Politique de carburant</h5>
+<p class="text-slate-600 dark:text-slate-400">Plein à plein. Le véhicule est livré avec le plein et doit être restitué avec le plein.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column - Sticky Sidebar -->
+<aside class="lg:sticky lg:top-24">
+<div class="bg-white dark:bg-slate-800 rounded-xl shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-700 p-6 overflow-hidden">
+<div class="flex items-center justify-between mb-6">
+<div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Prix total</p>
+<p class="text-2xl font-black text-slate-900 dark:text-white">1,350 MAD</p>
+</div>
+<div class="text-right">
+<p class="text-sm font-semibold text-primary">270 MAD / jour</p>
+<p class="text-xs text-slate-400">TVA incluse</p>
+</div>
+</div>
+<div class="space-y-4 mb-6">
+<div class="p-4 bg-slate-50 dark:bg-slate-900 rounded-lg">
+<div class="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span>
+                                    Dates de location
+                                </div>
+<div class="flex justify-between items-center text-sm">
+<div class="font-semibold">12 Mai - 10:00</div>
+<span class="material-symbols-outlined text-slate-300">arrow_forward</span>
+<div class="font-semibold">17 Mai - 10:00</div>
+</div>
+<div class="mt-2 pt-2 border-t border-slate-200 dark:border-slate-700 text-xs text-slate-500">
+                                    Durée totale: <span class="font-bold text-slate-900 dark:text-white">5 jours</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Location (5 jours)</span>
+<span class="font-medium">1,250 MAD</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Frais de service</span>
+<span class="font-medium">100 MAD</span>
+</div>
+<div class="flex justify-between text-sm text-primary font-bold">
+<span>Assurance collision (CDW)</span>
+<span>Inclus</span>
+</div>
+<div class="flex justify-between text-sm text-primary font-bold">
+<span>Kilométrage illimité</span>
+<span>Offert</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-white py-4 rounded-xl font-bold text-lg transition-all transform active:scale-[0.98] shadow-lg shadow-primary/20">
+                            Réserver maintenant
+                        </button>
+<p class="text-center text-xs text-slate-400 mt-4 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[14px]">security</span>
+                            Paiement sécurisé au comptoir
+                        </p>
+</div>
+<div class="mt-6 p-4 border border-dashed border-primary/40 bg-primary/5 rounded-xl">
+<h5 class="text-sm font-bold text-primary flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                            Meilleur prix garanti
+                        </h5>
+<p class="text-xs text-slate-600 dark:text-slate-400">
+                            Trouvez moins cher ailleurs et nous vous remboursons la différence plus 10%.
+                        </p>
+</div>
+</aside>
+</div>
+<!-- Map Preview (Bonus component to fill context) -->
+<section class="mt-12">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">map</span>
+                    Emplacement de l'agence
+                </h3>
+<div class="w-full h-80 rounded-xl bg-slate-200 dark:bg-slate-800 bg-cover bg-center overflow-hidden border border-slate-100 dark:border-slate-700" data-location="Casablanca" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBigjHqu_XmTOzjhypxfmEBHOV8PHYIQ5S2J22_gp-DZYYtvV9pR06gRINDlKxYZU1Ja-q9y73y2baDbKVnZL1Hd1QkobLyZG-c4xuMTK3S8xfZdvK-fcITmoaEszv6zg5wt2LF51sxZLC32i5j6t7fnmjyGBqzI9QA7SlPoU9yBTVpjZwHiXzAdwDgrFHpybeLdZe4JRG_iUV005w2MjroevO5u6lSO_Ov3V4qZMyR489OYUOw9NYkS1b39NTjzRsdNRoW817sqDo');">
+<div class="w-full h-full flex items-center justify-center bg-black/5">
+<div class="bg-white dark:bg-slate-900 px-6 py-3 rounded-full shadow-lg flex items-center gap-2 border border-primary/20">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-bold">Aéroport Mohammed V</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-12 mt-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="col-span-2">
+<div class="flex items-center gap-2 text-primary mb-6">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">YaanCarz</span>
+</div>
+<p class="text-slate-500 max-w-xs text-sm">
+                            Le premier comparateur de location de voitures multi-agences au Maroc. Trouvez le meilleur prix en un clic.
+                        </p>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-slate-900 dark:text-white">Liens rapides</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Aide &amp; Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Nos Agences</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Devenir Partenaire</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-slate-900 dark:text-white">Légal</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Mentions Légales</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Conditions Générales</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Confidentialité</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-100 dark:border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+<p>© 2024 YaanCarz. Tous droits réservés.</p>
+<div class="flex gap-6">
+<a class="hover:text-slate-600" href="#">Facebook</a>
+<a class="hover:text-slate-600" href="#">Instagram</a>
+<a class="hover:text-slate-600" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

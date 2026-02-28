@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>YaanCarz - Confirmation de réservation</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="layout-container flex h-full grow flex-col">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-white dark:bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">directions_car</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">YaanCarz</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Accueil</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Flotte</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Agences</a>
+<a class="text-primary text-sm font-semibold" href="#">Mes Réservations</a>
+</nav>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile picture of a smiling man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAEi1QsXsoA1JiWDOI4t-1HBQt0dfotNeSTdwqRnFEYtqDi70pUeievDGGQ411X0ElHru3pF47lLK8d9HBg__siOiT3VSZsdxY08oOfKS_sS2KSCVoQcIIfQQ8-Gwd1L8sfEM9szZCizmvFr46RTREbTIGrXk1duHJE_wG2Tg2DtMH3H4DflUDx4kJMJpebeVSy86WH0Z9X0f_JXTxiCgRLtfi5TKXidNVT__JkzCzKASeNy5mthHSu69507BEuSHNxuusvTpVwfrY");'>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-10 px-4 md:px-0">
+<div class="layout-content-container flex flex-col max-w-[800px] flex-1">
+<!-- Confirmation Content -->
+<div class="flex flex-col items-center text-center animate-in fade-in duration-700">
+<!-- Success Icon Wrapper -->
+<div class="mb-8 relative">
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-2xl scale-150"></div>
+<div class="relative bg-primary text-white size-24 rounded-full flex items-center justify-center shadow-lg shadow-primary/40">
+<span class="material-symbols-outlined text-6xl font-bold">check</span>
+</div>
+</div>
+<h1 class="text-slate-900 dark:text-slate-100 tracking-tight text-3xl md:text-4xl font-extrabold leading-tight mb-4">
+                            Félicitations ! Votre réservation est confirmée
+                        </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-[600px] mb-10">
+                            Préparez-vous à explorer le Maroc. Votre véhicule vous attendra à l'agence sélectionnée. Un e-mail récapitulatif a été envoyé à votre adresse.
+                        </p>
+<!-- Summary Card -->
+<div class="w-full bg-white dark:bg-slate-900/40 border border-primary/10 rounded-xl p-6 mb-10 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="bg-slate-50 dark:bg-background-dark/50 rounded-lg overflow-hidden border border-primary/5">
+<div class="aspect-video bg-center bg-cover" data-alt="Luxury white SUV car in a bright studio" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnDV75WRtlIk6tq2o8kx7tzZNZJhW_Cb8X2cTFkVAb8tAXJ5zlJGhbQfjJrTBCJgrFJT7mwnO2FH67KZe5yaP-mRpuyL4ENv4MMgvxfvfS0HjIiBOF2h0nFSdqSDnGq-ctYhKiFycOl31HFUtbSEzeC0NxxCRd6dvKxC0QpMKuIngLCdzmWiMQiDfFXXqTvOA0PE5-HMhPP03lNQAy19d3Nkcrw06AMk_TNnkSeXyanUIwisiJ_sCCQPfzskICFJITkgNxJye5FJk");'>
+</div>
+<div class="p-4 text-left">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Range Rover Velar</h3>
+<p class="text-sm text-slate-500">Automatique • Diesel • 5 Places</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 text-left">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Référence</span>
+<p class="text-2xl font-mono font-bold text-slate-900 dark:text-slate-100">YAAN-34821</p>
+</div>
+<div class="h-px bg-primary/10 w-full"></div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-lg">calendar_today</span>
+<span class="text-sm">15 Juin - 22 Juin 2024</span>
+</div>
+<div class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-lg">location_on</span>
+<span class="text-sm">Aéroport Mohammed V, Casablanca</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col md:flex-row items-center gap-4 w-full justify-center">
+<button class="flex min-w-[240px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary text-white text-base font-bold transition-all hover:bg-primary/90 hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined mr-2">receipt_long</span>
+<span>Voir mes réservations</span>
+</button>
+<button class="flex min-w-[240px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary/10 text-primary text-base font-bold transition-all hover:bg-primary/20 active:scale-95">
+<span class="material-symbols-outlined mr-2">home</span>
+<span>Retour à l'accueil</span>
+</button>
+</div>
+<!-- Map Preview Section (Optional) -->
+<div class="mt-16 w-full text-left">
+<h4 class="text-slate-900 dark:text-slate-100 font-bold mb-4">Emplacement de l'agence</h4>
+<div class="w-full h-48 rounded-xl overflow-hidden border border-primary/10 relative grayscale hover:grayscale-0 transition-all">
+<img class="w-full h-full object-cover" data-alt="Map showing Casablanca city center" data-location="Casablanca" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATc7P_1A-xiQTw3uHYEPsGfTvxs8VzVTQ6Idcz94JooxhC5OaXX1I5SnKFf84ZqYz6Rq4c0weQRpLex4bSvUmrA--HLeld1tlHpE6xsj3E8UOTVWdRebZkf53aF0JU-dQBAQmc1O84ps-u6tbLllCGmUgBcQ5FWXCkB8_uM63O1fv_qri6byAGfdQFwzE5-7SuoVOP_vg2YKA69HT3TmFgHCFIzJpFaYVO-uIDtk4uJkNB6bv1Z5mH3F-jmt2cigeumWUk84BMF60"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-primary text-white p-2 rounded-full shadow-lg border-2 border-white">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col gap-8 px-6 md:px-20 py-12 text-center bg-white dark:bg-slate-900/50 mt-12">
+<div class="flex flex-wrap items-center justify-center gap-8 md:justify-around">
+<a class="text-slate-500 hover:text-primary transition-colors text-sm font-medium" href="#">Conditions générales</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm font-medium" href="#">Politique de confidentialité</a>
+<a class="text-slate-500 hover:text-primary transition-colors text-sm font-medium" href="#">Contact</a>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+<div class="h-px bg-slate-200 dark:bg-slate-800 w-full max-w-4xl mx-auto"></div>
+<p class="text-slate-400 text-sm font-normal">© 2024 YaanCarz. Votre partenaire de confiance au Maroc. Tous droits réservés.</p>
+</footer>
+</div>
+</div>
+</body></html>

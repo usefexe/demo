@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>YaanCarz - Réservation (Étape 1)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10a24b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#112117",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex flex-col w-full">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4">
+<div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">directions_car</span>
+</div>
+<h1 class="text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase">Yaan<span class="text-primary">Carz</span></h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Flotte</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Agences</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Mes Réservations</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Aide</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 bg-primary text-white text-sm font-bold rounded-lg hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                        Connexion
+                    </button>
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto w-full px-4 lg:px-20 py-8">
+<!-- Progress Bar -->
+<div class="mb-10">
+<div class="flex items-center justify-between mb-4">
+<div class="flex flex-col">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Étape 1 sur 3</span>
+<h2 class="text-xl font-bold">Informations client</h2>
+</div>
+<span class="text-sm font-bold bg-primary/10 text-primary px-3 py-1 rounded-full">33% terminé</span>
+</div>
+<div class="h-3 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/3 rounded-full relative">
+<div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+</div>
+</div>
+<div class="flex justify-between mt-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-sm">person</span>
+<span class="text-xs font-bold uppercase">Client</span>
+</div>
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-sm">fact_check</span>
+<span class="text-xs font-bold uppercase">Récapitulatif</span>
+</div>
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="text-xs font-bold uppercase">Confirmation</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Main Form Area -->
+<div class="lg:col-span-8 space-y-8">
+<section class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">badge</span>
+<h3 class="text-lg font-bold">Coordonnées personnelles</h3>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Field: Full Name (Valid state) -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Nom complet</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg border-2 border-primary bg-primary/5 focus:ring-primary focus:border-primary transition-all text-slate-900" placeholder="Ex: Mohammed Alami" type="text" value="Mohammed Alami"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-primary">check_circle</span>
+</div>
+<p class="text-[10px] text-primary font-medium">Validé avec succès</p>
+</div>
+<!-- Field: Phone (Normal state) -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Téléphone</label>
+<div class="relative">
+<span class="absolute left-3 top-3 text-slate-400 font-medium">+212</span>
+<input class="w-full pl-14 pr-4 py-3 rounded-lg border border-slate-200 focus:ring-primary focus:border-primary transition-all" placeholder="6 12 34 56 78" type="tel"/>
+</div>
+</div>
+<!-- Field: Email (Error state) -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Email</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg border-2 border-red-500 bg-red-50 focus:ring-red-500 focus:border-red-500 transition-all" placeholder="votre@email.com" type="email" value="m.alami@mail"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-red-500">error</span>
+</div>
+<p class="text-[10px] text-red-500 font-medium">Veuillez entrer une adresse email valide</p>
+</div>
+<!-- Field: License Number -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300">Numéro de permis</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-primary focus:border-primary transition-all uppercase" placeholder="12/345678" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-slate-400">id_card</span>
+</div>
+</div>
+<div class="md:col-span-2 flex flex-col gap-4 mt-4">
+<label class="flex items-start gap-3 cursor-pointer">
+<input checked="" class="mt-1 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 leading-snug">J'accepte que mes données soient utilisées pour le traitement de cette réservation conformément à la politique de confidentialité.</span>
+</label>
+<label class="flex items-start gap-3 cursor-pointer">
+<input class="mt-1 rounded border-slate-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 leading-snug">Je souhaite recevoir des offres promotionnelles exclusives de YaanCarz.</span>
+</label>
+</div>
+</form>
+</section>
+<div class="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-slate-700">
+<button class="flex items-center gap-2 px-6 py-3 text-sm font-bold text-slate-600 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+                            Retour à la flotte
+                        </button>
+<button class="flex items-center gap-2 px-10 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 shadow-xl shadow-primary/20 transition-all">
+                            Continuer
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Sidebar Summary -->
+<div class="lg:col-span-4">
+<div class="sticky top-28 space-y-6">
+<div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 overflow-hidden">
+<div class="relative h-48 w-full bg-slate-100 dark:bg-slate-900">
+<img class="w-full h-full object-cover" data-alt="Modern white SUV parked in a scenic location" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxXf0pwLiDONSrQ936c1uVSBPbNY9tnYRqtxtAxAVl3fI_WDyY0UoovZdpXtuhY2VDMc_g115xb9tijXga-Zzh9XLEWXEa0cPCvzrHOUoCN91Fk0KLXoOojFB05IizEKplIaSed-LJ5fkGnQs1OtzkaoqZb0ECymRw405lR_rhQ0Erubf7Dm9Cxz5ehlbz94wni9YFL_ocW5YkTdI9lQXmZhGHTJT0WzVoR-af9Tio7AB8VK6sz6zFNlgFSl0_qll7hRaJ5aCObpE"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm">
+                                    Premium
+                                </div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<h4 class="text-xl font-black">Range Rover Evoque</h4>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined text-sm fill-amber-500">star</span>
+<span class="text-sm font-bold">4.9</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 mb-6">
+<div class="flex items-center gap-1 text-slate-500 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">settings</span> Automatique
+                                    </div>
+<div class="flex items-center gap-1 text-slate-500 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">person</span> 5 Places
+                                    </div>
+<div class="flex items-center gap-1 text-slate-500 text-xs font-medium">
+<span class="material-symbols-outlined text-sm">local_gas_station</span> Hybride
+                                    </div>
+</div>
+<div class="space-y-3 py-4 border-t border-slate-100 dark:border-slate-700">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Durée (3 jours)</span>
+<span class="font-semibold">1,800 MAD</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">Assurance Tous Risques</span>
+<span class="font-semibold text-primary">Inclus</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500">TVA (20%)</span>
+<span class="font-semibold">360 MAD</span>
+</div>
+</div>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-700">
+<div class="flex justify-between items-end">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Total à payer</span>
+<span class="text-2xl font-black text-primary">2,160 MAD</span>
+</div>
+<span class="text-[10px] text-slate-400 italic">Caution: 5,000 MAD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Agency Info -->
+<div class="bg-primary/5 rounded-xl p-4 border border-primary/10 flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-500 uppercase tracking-tighter">Agence de retrait</p>
+<p class="text-sm font-bold text-slate-900">Aéroport Casablanca (CMN)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12 px-6 lg:px-20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">directions_car</span>
+<h2 class="text-lg font-black tracking-tight uppercase">Yaan<span class="text-primary">Carz</span></h2>
+</div>
+<p class="text-sm text-slate-500">© 2024 YaanCarz Maroc. Tous droits réservés.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Conditions Générales</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Politique de Confidentialité</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-xl">public</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-xl">share</span>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
