@@ -25,7 +25,7 @@
             },
         }
     </script>
-<title>YaanCarz - Confirmation de réservation</title>
+<title>YaanCarz - Réservation Confirmée</title>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
 <div class="relative flex min-h-screen w-full flex-col">
@@ -145,4 +145,11 @@
 </footer>
 </div>
 </div>
+<script type="module">
+import { initSuccessPage } from './js/booking.js';
+import { initAuthUI } from './js/auth.js';
+
+initAuthUI();
+initSuccessPage();
+</script>
 </body></html>

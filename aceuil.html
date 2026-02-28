@@ -78,12 +78,12 @@ select {
 <p class="text-lg lg:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-medium">
                                 Comparez les meilleures agences de location à Casablanca, Rabat et partout ailleurs.
                             </p>
-<div class="bg-white p-4 lg:p-6 rounded-xl shadow-2xl flex flex-col lg:flex-row items-end gap-4 text-left">
+<form class="bg-white p-4 lg:p-6 rounded-xl shadow-2xl flex flex-col lg:flex-row items-end gap-4 text-left" id="searchForm">
 <div class="flex-1 w-full">
 <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1">Ville de départ</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary">location_on</span>
-<select class="w-full pl-12 pr-10 py-4 bg-background-light border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 font-medium">
+<select class="w-full pl-12 pr-10 py-4 bg-background-light border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 font-medium" id="citySelect">
 <option>Casablanca</option>
 <option>Rabat</option>
 <option>Marrakech</option>
@@ -97,21 +97,21 @@ select {
 <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1">Prise en charge</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary">calendar_month</span>
-<input class="w-full pl-12 pr-4 py-4 bg-background-light border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 font-medium" readonly="" type="text" value="12 Mai 2024"/>
+<input class="w-full pl-12 pr-4 py-4 bg-background-light border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 font-medium" type="date" id="fromDate" required/>
 </div>
 </div>
 <div class="flex-1 w-full">
 <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 ml-1">Restitution</label>
 <div class="relative">
 <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary">event_busy</span>
-<input class="w-full pl-12 pr-4 py-4 bg-background-light border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 font-medium" readonly="" type="text" value="19 Mai 2024"/>
+<input class="w-full pl-12 pr-4 py-4 bg-background-light border-none rounded-lg focus:ring-2 focus:ring-primary text-slate-900 font-medium" type="date" id="toDate" required/>
 </div>
 </div>
-<button class="w-full lg:w-auto px-10 py-4 bg-primary text-white font-black rounded-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2 h-[60px]">
+<button class="w-full lg:w-auto px-10 py-4 bg-primary text-white font-black rounded-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2 h-[60px]" type="submit">
 <span class="material-symbols-outlined">search</span>
                                     RECHERCHER
                                 </button>
-</div>
+</form>
 </div>
 </div>
 </div>
@@ -221,4 +221,38 @@ select {
 </div>
 </footer>
 </div>
+<script type="module">
+import { localStorage_get, localStorage_set, showToast } from './js/app.js';
+
+// Setup home search form
+const searchForm = document.getElementById('searchForm');
+if (searchForm) {
+  searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const city = document.getElementById('citySelect')?.value || 'Casablanca';
+    const fromDate = document.getElementById('fromDate')?.value;
+    const toDate = document.getElementById('toDate')?.value;
+
+    if (!fromDate || !toDate) {
+      showToast('Veuillez sélectionner les dates', 'error');
+      return;
+    }
+
+    const queryString = `?city=${encodeURIComponent(city)}&from=${fromDate}&to=${toDate}`;
+    window.location.href = `resultsearch.html${queryString}`;
+  });
+
+  // Set default dates (today and +7 days)
+  const today = new Date().toISOString().split('T')[0];
+  const nextWeek = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+  
+  document.getElementById('fromDate').value = today;
+  document.getElementById('toDate').value = nextWeek;
+}
+
+// Initialize auth UI
+import { initAuthUI } from './js/auth.js';
+initAuthUI();
+</script>
 </body></html>

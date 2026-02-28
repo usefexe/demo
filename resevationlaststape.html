@@ -243,4 +243,28 @@
 </main>
 </div>
 </div>
+<script type="module">
+import { initReservationRecap } from './js/booking.js';
+import { initAuthUI } from './js/auth.js';
+
+// Add data attributes to the recap content area
+document.addEventListener('DOMContentLoaded', () => {
+  const mainContent = document.querySelector('main');
+  if (mainContent && !mainContent.querySelector('[data-recap-content]')) {
+    const recapDiv = mainContent.querySelector('.space-y-8');
+    if (recapDiv) {
+      recapDiv.setAttribute('data-recap-content', 'true');
+    }
+  }
+  
+  // Find and add data-confirm-btn to the confirm button
+  const confirmBtn = mainContent.querySelector('button');
+  if (confirmBtn && confirmBtn.textContent.includes('Confirmer')) {
+    confirmBtn.setAttribute('data-confirm-btn', 'true');
+  }
+});
+
+initAuthUI();
+initReservationRecap();
+</script>
 </body></html>

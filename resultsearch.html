@@ -33,10 +33,10 @@
 <header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
 <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
 <div class="flex items-center gap-8">
-<div class="flex items-center gap-2 text-primary">
+<a href="aceuil.html" class="flex items-center gap-2 text-primary hover:opacity-80 transition">
 <span class="material-symbols-outlined text-3xl font-bold">directions_car</span>
 <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">YaanCarz</h2>
-</div>
+</a>
 <div class="hidden md:flex items-center bg-slate-100 dark:bg-slate-800 rounded-xl px-4 py-2 border border-slate-200 dark:border-slate-700">
 <span class="material-symbols-outlined text-slate-500 text-lg">location_on</span>
 <span class="ml-2 text-sm font-medium">Casablanca</span>
@@ -69,7 +69,7 @@
 <div>
 <div class="flex items-center justify-between">
 <h3 class="text-lg font-bold">Filtres</h3>
-<button class="text-xs font-semibold text-primary">Réinitialiser</button>
+<button class="text-xs font-semibold text-primary" data-reset-filters>Réinitialiser</button>
 </div>
 <p class="mt-1 text-sm text-slate-500">24 véhicules disponibles</p>
 </div>
@@ -161,10 +161,10 @@
 <!-- Main Content Area -->
 <div class="flex-1">
 <!-- Search Result Header -->
-<div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+<div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between" data-search-results>
 <div>
-<h1 class="text-2xl font-bold text-slate-900 dark:text-white">Casablanca : 24 véhicules trouvés</h1>
-<p class="text-slate-500">Du 12 au 15 Mars (3 jours)</p>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white" data-search-title>Casablanca : 24 véhicules trouvés</h1>
+<p class="text-slate-500" data-search-desc>Du 12 au 15 Mars (3 jours)</p>
 </div>
 <div class="flex items-center gap-2">
 <span class="text-sm font-medium text-slate-500">Trier par:</span>
@@ -177,7 +177,7 @@
 </div>
 </div>
 <!-- Grid of Car Cards -->
-<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2" data-cars-grid>
 <!-- Card 1 -->
 <div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 shadow-sm border border-slate-100 dark:border-slate-800 hover:shadow-lg transition-all duration-300">
 <div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
@@ -485,4 +485,11 @@
 </div>
 </footer>
 </div>
+<script type="module">
+import { initSearchResults } from './js/search.js';
+import { initAuthUI } from './js/auth.js';
+
+initAuthUI();
+initSearchResults();
+</script>
 </body></html>
